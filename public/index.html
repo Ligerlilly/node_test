@@ -2,8 +2,33 @@
 <html>
   <head>
     <title>test</title>
+    <script src="js/Chart.js"></script>
   </head>
   <body>
-    <h1>Hi</h1>
+    <canvas id="myChart" width="400" height="400"></canvas>
+    <script charset="utf-8">
+      var data = [
+        {
+          value: 300,
+          color: 'red',
+          highlight: 'orange',
+          label: 'red'
+        },
+        {
+          value: 200,
+          color: 'blue',
+          highlight: 'lightblue',
+          label: 'blue'
+        },
+        {
+          value: 75,
+          color: 'pink',
+          highlight: 'brown',
+          label: 'pink'
+        }
+      ];
+      var ctx = document.getElementById("myChart").getContext("2d");
+      var myDoughnutChart = new Chart(ctx).Doughnut(data);
+    </script>
   </body>
 </html>
